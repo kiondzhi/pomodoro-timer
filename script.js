@@ -21,7 +21,7 @@ const startTimer = () => {
     } else {
         seconds.innerHTML = '0' + second;
     }
-    if (second === 60) {
+    if (second > 59) {
         second = 0;
         minute++;
         if (minute > 9) {
@@ -75,6 +75,6 @@ const startTimer = () => {
 
 buttonStart.addEventListener('click', () => {
     clearInterval(interval);
-    interval = setInterval(startTimer, 1000);
+    interval = setInterval(startTimer, 10);
 });
 

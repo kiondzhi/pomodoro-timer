@@ -53,3 +53,28 @@ main {
         }
     }
 }
+
+@media(max-width: 500px) {
+
+    body {
+        margin-top: 50%;
+    }
+
+    main {
+        height: 300px;
+        width: 300px;
+
+        img {
+            height: 70px;
+        }
+
+        .board {
+            font-size: 40px;
+        }
+
+        button {
+
+            height: 70px;
+        }
+    }
+}

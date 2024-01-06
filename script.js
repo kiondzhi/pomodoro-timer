@@ -75,6 +75,6 @@ const startTimer = () => {
 
 buttonStart.addEventListener('click', () => {
     clearInterval(interval);
-    interval = setInterval(startTimer, 1);
+    interval = setInterval(startTimer, 1000);
 });
 

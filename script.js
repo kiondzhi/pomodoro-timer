@@ -1,3 +1,5 @@
+import * as workerTimers from 'https://esm.run/worker-timers';
+
 let seconds = document.querySelector('.seconds');
 let minutes = document.querySelector('.minutes');
 let buttonStart = document.querySelector('.button');
@@ -6,6 +8,11 @@ let interval;
 let minute = 0;
 let second = 0;
 let breaksss = "Break";
+
+function playSound(audioName) {
+    let audio = new Audio(audioName);
+    audio.play();
+}
 
 const startTimer = () => {
     second++;
@@ -24,6 +31,7 @@ const startTimer = () => {
         }
     }
     if (minute === 25) {
+        playSound("apple-pay-succes.mp3");
         second = 0;
         minute = 0;
         if (second > 9) {
@@ -42,6 +50,7 @@ const startTimer = () => {
 
     if (buttonStart.innerHTML == breaksss) {
         if (minute === 5) {
+            playSound("apple-pay-succes.mp3");
             second = 0;
             minute = 0;
             if (second > 9) {
